@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
 
   rows:any[] = [];
   cols:any[] = [];
-  model = {}; 
- 
+  model = {};
+
   constructor() {
   }
   ngOnInit() {
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   }
 assignvalue(row,col,ev){
   const key = this.getKey(row,col);
-  const value:String = ev.target.value;
+  const value = ev.target.value;
   if(!isNaN(value)){
   this.model[key] = {
     value:ev.target.value ? parseFloat(ev.target.value) : null,
